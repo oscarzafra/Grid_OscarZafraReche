@@ -26,6 +26,7 @@
     background-color: var(--red-color);
     color: var(--primary-color);
     grid-row: 1 / 3;
+    grid-area: "the-intro";
     
   }
 
@@ -33,11 +34,13 @@
     background-image: url(MahouClasica.webp);
     background-color: var(--lightgreen-color);
     grid-column: 2;
+    grid-area: "the-clasica";
   }
 
   .trabajadores {
     background-image: url(MahouTrabajadores.jpg);
     grid-column: 3;
+    grid-area: "the-trabajadores";
   }
 
   .sed {
@@ -45,12 +48,14 @@
     grid-column: 2 / 3;
     text-align: center;
     padding: 40px;
+    grid-area: "the-sed";
   }
 
   .cinco_estrellas {
     background-image: url(MahouCincoEstrellas.webp);
     background-color: var(--red-color);
     grid-column: 1 / 2;
+    grid-area: "the-cinco_estrellas";
     
   }
 
@@ -58,12 +63,14 @@
     background-image: url(Alahambra.png);
     background-color: var(--lightgreen-color);
     grid-column: 3 / 4;
+    grid-area: "the-alahambra";
     
   }
 
   .fabrica {
     background-color: var(--yellow-color);
     grid-column: 2 / 4;
+    grid-area: "the-fabrica";
   }
 
   h1 , h2 {
@@ -92,3 +99,26 @@
     background-position: center;
     border: 1px solid #ccc;
   }
+
+  @media (max-width: 768px) {
+    .contenedor {
+      grid-template-columns: 1fr;
+      grid-template-rows:
+        120px
+        120px
+        1fr
+        120px
+        120px;
+      grid-template-areas:
+       "the-intro"
+       "the-clasica"
+       "the-trabajadores"
+       "the-sed"
+       "the-cinco_estrellas"
+       "the-alahambra"
+       "the-fabrica"
+    }
+    
+  }
+
+  
